@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade calculator</title>
+</head>
+<body>
+
+    <h2>We will calculate your Grade</h2>
+    <input type="number" id="Grade" placeholder="Enter your Grade">
+    <button onclick="calculateGrade()">Calculate Grade</button>
+    <p>Your Grade is : <span id="FinalGrade"></span></p> 
+	<p>Your Score is : <span id="finalgrade"></span></p>
+
+    <script>
+        function calculateGrade() {
+			// Get value from input feilds
+            let Grade = parseFloat(document.getElementById('Grade').value);
+			
+			// calculate Grade
+			let grade;
+			
+		if (Grade >= 85) {
+			grade = " A ";
+			} else if (Grade >= 75) { 
+				grade = " B "; 
+			} else if (Grade >= 65) { 
+				grade = " C ";
+			} else if (Grade >= 50) { 
+				grade = " D "; 
+			} else { 
+				grade = " F ";
+			}	
+			
+			// Display Grade
+            document.getElementById('FinalGrade').textContent = Grade;
+			
+			// Display grade
+			document.getElementById('finalgrade').textContent = grade;
+		}
+		
+    </script>
+</body>
+</html>
